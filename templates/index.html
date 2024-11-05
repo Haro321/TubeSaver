@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TubeSaver - YouTube Downloader</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            background-color: #212529; 
+            color: #ffffff; 
+        }
+        .container {
+            margin-top: 50px;
+            background-color: #343a40; 
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+        h2 {
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+        .form-control {
+            background-color: #495057; 
+            color: #ffffff; 
+            border: 1px solid #6c757d; 
+        }
+        .form-control:focus {
+            background-color: #495057; 
+            color: #ffffff; 
+            border-color: #007bff; 
+            box-shadow: none; 
+        }
+        .btn-primary {
+            background-color: #007bff; 
+            border-color: #007bff;
+        }
+        .btn-primary:hover {
+            background-color: #0056b3; 
+            border-color: #0056b3; 
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>TubeSaver - YouTube Downloader</h2>
+        <form action="/download" method="post">
+            <div class="form-group">
+                <label for="url">YouTube Link:</label>
+                <input type="text" class="form-control" id="url" name="url" placeholder="Enter the YouTube link here" required>
+            </div>
+            <div class="form-group">
+                <label for="quality">Select Quality:</label>
+                <select class="form-control" id="quality" name="quality" required>
+                    <option value="">Choose...</option>
+                    <option value="360p">360p</option>
+                    <option value="480p">480p</option>
+                    <option value="720p">720p</option>
+                    <option value="1080p">1080p</option>
+                    <option value="1440p">1440p</option>
+                    <option value="4K">4K</option>
+                    <option value="Highest">Highest</option>
+                    <option value="Audio Only">Audio Only</option>
+                </select>
+            </div>
+            <button type="submit" class="btn btn-primary btn-block">Start Download</button>
+        </form>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+</body>
+</html>
